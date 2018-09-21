@@ -1,44 +1,41 @@
 {
-  "bankName": "ABC Bank Plc.",
-  "description": "The number one bank",
-  "street": "123 Somewhere street",
-  "city": "Victoria Island",
-  "state": "Lagos ",
-  "countryCode": "NG",
-  "country":"Nigeria",
-  "website": "www.abc.ng",
-  "bankCategory": "NATIONAL_BANK",
-  "rcnumber": "RC000123",
-  "swiftCode": "ABCNGLA",
-  "nibssCode": "000123",
-  "cbnBankCode": "123",
-  "numberOfBranches": 300,
-  "numberOfAtms": 3000,
-  "incorporationDate": "01/10/1999",
-  "supportInfo": [
-    {
-      "description": "Card payment Support",
-      "type": "email",
-      "value": "info@abc.ng"
-    },
-    {
-      "description": "Card payment Support Phone",
-      "type": "Phone",
-      "value": "+2348141376800"
-    }
-  ],
-  "socialMediaInfo": [
-    {
-      "description": "Instagram ",
-      "type": "IG",
-      "value": "@abc.ng"
-    }
-  ],
-  "expansionFields": [
-    {
-      "id": "Field1",
-      "description": "What is the intention of this ",
-      "value": "1001920190290"
-    }
-  ]
+	"bankName": "ABC Bank Plc.",
+	"description": "The number one bank",
+	"street": "123 Somewhere street",
+	"city": "Victoria Island",
+	"state": "Lagos ",
+	"country": "NG",
+	"latitude": "7.332014",
+	"longitude": "3.868880",
+	"swiftCode": "ABCNGLA",
+	"nibssCode": "000123",
+	"cbnBankCode": "123",
+	"numberOfBranches": 300,
+	"incorporationDate": "2000-12-01",
+	"rcnumber": "RC000123",
+	"website": "https://www.abcbank.ng",
+	"bankCategory": "National Bank",
+	"logo": "https://images.abcbank.ng/wp-content/randomupload/logo.png",
+	"contactInfo": [
+		{
+			"description": "Customer support email",
+			"type": "email",
+			"value": "support@abcbank.ng"
+		}
+	],
+	"socialMedia": [
+		{
+			"description": "Instagram",
+			"type": "IG",
+			"value": "@abcbank"
+		}
+	],
+	"expansionFields": [
+		{
+			"id": "Some random ID",
+			"description": "Some random text",
+			"type": "Some random type",
+			"value": "Some value"
+		}
+	]
 }

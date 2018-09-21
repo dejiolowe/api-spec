@@ -1,74 +1,33 @@
 [{
-  "id": "01234",
-  "name": "Lekki1 Branch",
-  "type":"FULL",
-  "street":"Admitalty way",
-  "city": "Lekki",
-  "state": "Lagos ",
-  "countryCode": "NG",
-  "country":"Nigeria",
-  "numberOfAtms": 3,
-  "supportInfo": [
-    {
-      "description": "Card payment Support",
-      "type": "email",
-      "value": "lekki1.branch@abc.ng"
-    },
-    {
-      "description": "Card payment Support Phone",
-      "type": "Phone",
-      "value": "+2348141376800"
-    }
-  ],
-  "socialMediaInfo": [
-    {
-      "description": "Instagram ",
-      "type": "IG",
-      "value": "@abc.ng"
-    }
-  ],
-  "expansionFields": [
-    {
-      "id": "Field1",
-      "description": "What is the intention of this ",
-      "value": "1001920190290"
-    }
-  ]
-},
-{
-  "id": "10234",
-  "name": "Victoria Branch",
-  "type":"FULL",
-  "street":"Adetokunbo Ademola",
-  "city": "Victoria Island",
-  "state": "Lagos ",
-  "countryCode": "NG",
-  "country":"Nigeria",
-  "numberOfAtms": 10,
-  "supportInfo": [
-    {
-      "description": "Card payment Support",
-      "type": "email",
-      "value": "vi.branch@abc.ng"
-    },
-    {
-      "description": "Card payment Support Phone",
-      "type": "Phone",
-      "value": "+234814000000"
-    }
-  ],
-  "socialMediaInfo": [
-    {
-      "description": "Instagram ",
-      "type": "IG",
-      "value": "@abc.ng"
-    }
-  ],
-  "expansionFields": [
-    {
-      "id": "Field1",
-      "description": "What is the intention of this ",
-      "value": "1001920190290"
-    }
-  ]
+	"branchId": "0123",
+	"branchName": "Alaba Oriole Branch",
+	"branchType": "Full Branch",
+	"description": "A random fancy branch",
+	"street": "123 Karaole Street",
+	"city": "Ibadan",
+	"state": "Oyo",
+	"country": "NG",
+	"contactInfo": [
+		{
+			"description": "Customer support email",
+			"type": "email",
+			"value": "support@abcbank.ng"
+		},
+		{
+			"description": "Customer support phone",
+			"type": "phone",
+			"value": "+234 2 345 6789"
+		}
+	],
+	"latitude": "7.332014",
+	"longitude": "3.868880",
+	"numberOfATMs": 2,
+	"expansionFields": [
+		{
+			"id": "Some random ID",
+			"description": "Some random text",
+			"type": "Some random type",
+			"value": "Some value"
+		}
+	]
 }]

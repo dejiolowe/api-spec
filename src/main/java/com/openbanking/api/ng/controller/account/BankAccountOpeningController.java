@@ -32,7 +32,7 @@ import lombok.extern.slf4j.Slf4j;
 @RestController
 @Slf4j
 @RequestMapping(path="account")
-@Api(value = "Account", description = "Account related operations", consumes = "application/json", produces = "application/json", tags = {"account"})
+@Api(value = "Account", description = "Account related operations", consumes = "application/json", produces = "application/json", tags = {"Account"})
 public class BankAccountOpeningController extends BaseApiController {
 
 	@Autowired
@@ -49,12 +49,11 @@ public class BankAccountOpeningController extends BaseApiController {
 		return new GenericSuccessResponse<BankAccountOpeningResponse>("Account opened successfully",bankInfo);
 	}
 	
-	@ApiOperation(value = "Finds an Account by Account Opening requestId",
-		     notes = "Gives general Information about an Account Number",
+	@ApiOperation(value = "Account Opening Status by Request ID",
 		     response = BankAccountOpeningResponse.class, nickname = "Get a single Account")
 		@ApiResponses(value = {@ApiResponse(code = 400, message = "Invalid requestId supplied"),
 		     @ApiResponse(code = 404, message = "Account Not Found"), @ApiResponse(code = 200, response = BankAccountOpeningResponse.class, message = "Account Information")})
-	@GetMapping(path="/req/{requestId}")
+	@GetMapping(path="/account/status/requestID/{requestId}")
 	public GenericResponse<BankAccountOpeningResponse> findAccountByRequestId(@PathVariable  @ApiParam(value = "Account opening requestId", required = true) String requestId) {
 		BankAccountOpeningResponse bankInfo=bankService.getAccountByRequestId(requestId);
 		return new GenericSuccessResponse<BankAccountOpeningResponse>("Account found",bankInfo);
@@ -64,12 +63,11 @@ public class BankAccountOpeningController extends BaseApiController {
 	
 	
 	
-	 @ApiOperation(value = "Finds an Account by Account Number",
-     notes = "Gives general Information about an Account Number",
-     response = BankAccountOpeningResponse.class, nickname = "Get a single Account")
+	 @ApiOperation(value = "Account Opening Status by NUBAN",
+     response = BankAccountOpeningResponse.class)
 @ApiResponses(value = {@ApiResponse(code = 400, message = "Invalid Account Number supplied"),
-     @ApiResponse(code = 404, message = "Account Not Found"), @ApiResponse(code = 200, response = BankAccountOpeningResponse.class, message = "Account Information")})
-	 @GetMapping(path="/{accountNumber}")
+     @ApiResponse(code = 404, message = "Account Not Found"), @ApiResponse(code = 200, response = BankAccountOpeningResponse.class, message = "Account Status Information")})
+	 @GetMapping(path="/account/status/nuban/{accountNumber}")
 	public GenericResponse<BankAccountOpeningResponse> findAccountByAccountNumber(@PathVariable  @ApiParam(value = "The Account Number", required = true) String accountNumber) {
 		BankAccountOpeningResponse bankInfo=bankService.getAccountByRequestId(accountNumber);
 		return new GenericSuccessResponse<BankAccountOpeningResponse>("Account found",bankInfo);
@@ -77,10 +75,10 @@ public class BankAccountOpeningController extends BaseApiController {
 	
 	
 	 @ApiOperation(value = "Get all Account products",
-	            response = BankBranchInfoDto.class, responseContainer = "List")
+	            response = BankAccountProductDto.class, responseContainer = "List")
 	    @ApiResponses(value = {
 	            @ApiResponse(code = 404, message = "Account Products not found")})
-		@GetMapping(path="/account/products")
+		@GetMapping(path="/types")
 		public GenericResponse<List<BankAccountProductDto>> getAccountProducts() {
 			List<BankAccountProductDto> bankInfo=bankService.getAccountProducts();
 			if(bankInfo==null) {
@@ -90,6 +88,18 @@ public class BankAccountOpeningController extends BaseApiController {
 		}
 		
 		
-	
+	 @ApiOperation(value = "Gets a specified  account product",
+	            response = BankAccountProductDto.class, responseContainer = "List")
+	    @ApiResponses(value = {
+	            @ApiResponse(code = 404, message = "Account Products not found")})
+		@GetMapping(path="/types/{accountTypeId}")
+		public GenericResponse<BankAccountProductDto> getAccountProductById(@PathVariable String accountTypeId) {
+			List<BankAccountProductDto> bankInfo=bankService.getAccountProducts();
+			if(bankInfo==null) {
+				return new GenericFailureResponse<>("Error processing request");
+			}
+			return new GenericSuccessResponse<BankAccountProductDto>("Request processed ok",bankInfo.get(0));
+		}
+		
 	
 }

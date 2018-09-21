@@ -41,6 +41,10 @@ public class BankinfoDto implements Serializable {
 	
 	private String rcNumber;
 	
+	private String  latitude;
+	
+	private String longitude;
+	
 	
 	private String swiftCode;
 	
@@ -52,15 +56,19 @@ public class BankinfoDto implements Serializable {
 	
 	
 	private int numberOfBranches;
+
 	
 	
-	private int numberOfAtms;
+	private String incorporationDate;
+	
+	private String logo;
+	
+	private String bankCategory;
+	
+	  
 	
 	
-	private String dateOfIncooperation;
-	
-	
-	private Set<SupportInfo> supportInfo;
+	private Set<ContactInfo> contactInfo;
 	
 	
 	private Set<SocialMediaInfo> socialMediaInfo;

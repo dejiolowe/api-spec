@@ -14,16 +14,16 @@ public class BankBranchInfoDto implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	private String description;
 	
 	
-	
-	private String id;
-	
-	
-	private String name;
+	private String branchId;
 	
 	
-	private String type;
+	private String branchName;
+	
+	
+	private String branchType;
 	
 	
 	private String  street;
@@ -36,36 +36,20 @@ public class BankBranchInfoDto implements Serializable {
 	
 	
 	private String country;
+
 	
-	
-	private String website;
-	
-	
-	private String category;
-	
-	
-	private String rcNumber;
-	
-	
-	private String swiftCode;
-	
-	
-	private String nibssCode;
-	
-	
-	private String cbnBankCode;
-	
-	
-	private int numberOfBranches;
 	
 	
 	private int numberOfAtms;
 	
 	
-	private String dateOfIncooperation;
+	
+	private String  latitude;
+	
+	private String longitude;
 	
 	
-	private Set<SupportInfo> supportInfo;
+	private Set<ContactInfo> contactInfo;
 	
 	
 	private Set<SocialMediaInfo> socialMediaInfo;

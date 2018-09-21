@@ -1,53 +1,55 @@
-[{
-	"accountTypeId": "SBA123",
-	"accountTypeName": "SANEF Savings Accounts",
-	"minBalance": 100000,
-	"maxBalance": 100000000,
-	"maxOutflowTxnLimit": 10000000,
-	"maxInflowTxnLimit": 25000000,
-	"currency": "NGN",
-	"kycLevel": 2,
-	"documentations": [
-		{
-			"type": "BVN",
-			"description": "Biometric Verification Number"
-		},
-		{
-			"type": "NID",
-			"description": "National Id card"
-		},
-		{
-			"type": "ADD",
-			"description": "Adress"
+[
+	{
+		"accountTypeId": "SBA123",
+		"accountTypeName": "SANEF Savings Accounts",
+		"minimumBalance": "100000.00",
+		"maximumBalance": "100000.00",
+		"maximumOutflowLimit": "100000.00",
+		"maximumInFlowLimit": "250000.00",
+		"currency": "NGN",
+		"decimal": 0,
+		"kycLevel": 2,
+		"documentationRequired": [
+			{
+				"type": "id",
+				"description": "Proof of identity",
+				"value": "Passport photograph"
+			}
+		],
+		"digitalServices": [
+			{
+				"service": "USSD",
+				"description": "ABC Super Banking",
+				"available": true
+			},
+			{
+				"service": "mobile",
+				"description": "ABC Mobile Banking",
+				"available": false
+			}
+		],
+		"cardProducts": [
+			{
+				"id": "MC",
+				"description": "Mastercard",
+				"available": true
+			},
+			{
+				"id": "VS",
+				"description": "Visa",
+				"available": false
+			},
+			{
+				"id": "VR",
+				"description": "Verve",
+				"available": true
+			}
+		],
+		"expansionFields": {
+			"id": "Some random ID",
+			"description": "Some random text",
+			"type": "Some random type",
+			"value": "Some value"
 		}
-	],
-	"cardProducts": [
-		{
-			"type": "Mastercard",
-			"description": "Mastercard",
-			"maxTransactionLimit": "50000"
-		},
-		{
-			"type": "Visa",
-			"description": "Visa",
-			"maxTransactionLimit": "50000"
-		},
-		{
-			"type": "Verve",
-			"description": "Verve",
-			"maxTransactionLimit": "50000"
-		}
-	],
-	"ussd": "true",
-	"mobileApp": "true",
-	"atm": "true",
-	"localWeb": "true",
-	"internationalWeb": "false",
-	"expansionFields": [
-		{
-			"id": "Field1",
-			"description": "What is the intention of this ",
-			"value": "1001920190290"
-		}
-	]
-}]
+	}
+]

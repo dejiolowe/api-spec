@@ -14,23 +14,25 @@ public class BankAccountProductDto implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	
-	private String id;
+	private String accountTypeId;
 
 	
-	private String name;
+	private String accountTypeName;
 
 	
-	private String minBalance;
+	private String minimumBalance;
 
 	
-	private String maxBalance;
+	private String maximumOutflowLimit;
 
 	
-	private String maxOutflowTxnLimit;
+	private String maximumBalance;
 
 	
-	private String maxInflowTxnLimit;
+	private String maximumInFlowLimit;
 
+	
+	private String decimal;
 	
 	private String currency;
 
@@ -49,8 +51,11 @@ public class BankAccountProductDto implements Serializable {
 	private boolean internationalWeb;
 
 	
-	private List<AccountOpeningDocumentationDto> documentations;
+	
+	private List<AccountOpeningDocumentationDto> documentationRequired;
 
+	private List<DigitalServicesDto> digitalServices;
+	
 	
 	private List<CardProductsDto> cardProducts;
 

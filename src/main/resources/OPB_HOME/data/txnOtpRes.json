@@ -1,0 +1,13 @@
+{
+	"status": "SUCCESSFUL",
+	"message": "Request processed successfully",
+	"data": {
+		"transactionId": "SUPERAGENT0013456",
+		"accountNumber": "0123456784",
+		"referenceId": "CI12345678",
+		"transactionDate": "2018-09-04 17:45:55",
+		"Process": "Online",
+		"processCode": "00",
+		"processMessage": "Transaction processed successfully"
+	}
+}
