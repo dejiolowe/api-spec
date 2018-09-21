@@ -1,0 +1,44 @@
+[
+
+	{
+		"name": "personal.update",
+		"description": "Can update personal details"
+	},
+	{
+		"name": "employee.contact.update",
+		"description": "Can update contact details"
+	},
+	{
+		"name": "employee.employement.update",
+		"description": "Can update employement details"
+	},	
+	{
+		"name": "employee.finace.update",
+		"description": "Can update finacial details"
+	},
+	{
+		"name": "employee.contact.approve",
+		"description": "Can approve employee contact"
+	},	
+	{
+		"name": "employee.employement.approve",
+		"description": "Can approve employee employement details"
+	},	
+	{
+		"name": "employee.finace.approve",
+		"description": "Can approve employee finace details"
+	},			
+	{
+		"name": "loan.apply",
+		"description": "Can apply for loans"
+	},
+	{
+		"name": "loan.approve",
+		"description": "Can aprrove for loans"
+	},
+	{
+		"name": "contribution.approve",
+		"description": "Can contribution changes"
+	}
+	
+]

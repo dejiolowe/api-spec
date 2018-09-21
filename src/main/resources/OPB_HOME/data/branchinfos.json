@@ -1,0 +1,74 @@
+[{
+  "id": "01234",
+  "name": "Lekki1 Branch",
+  "type":"FULL",
+  "street":"Admitalty way",
+  "city": "Lekki",
+  "state": "Lagos ",
+  "countryCode": "NG",
+  "country":"Nigeria",
+  "numberOfAtms": 3,
+  "supportInfo": [
+    {
+      "description": "Card payment Support",
+      "type": "email",
+      "value": "lekki1.branch@abc.ng"
+    },
+    {
+      "description": "Card payment Support Phone",
+      "type": "Phone",
+      "value": "+2348141376800"
+    }
+  ],
+  "socialMediaInfo": [
+    {
+      "description": "Instagram ",
+      "type": "IG",
+      "value": "@abc.ng"
+    }
+  ],
+  "expansionFields": [
+    {
+      "id": "Field1",
+      "description": "What is the intention of this ",
+      "value": "1001920190290"
+    }
+  ]
+},
+{
+  "id": "10234",
+  "name": "Victoria Branch",
+  "type":"FULL",
+  "street":"Adetokunbo Ademola",
+  "city": "Victoria Island",
+  "state": "Lagos ",
+  "countryCode": "NG",
+  "country":"Nigeria",
+  "numberOfAtms": 10,
+  "supportInfo": [
+    {
+      "description": "Card payment Support",
+      "type": "email",
+      "value": "vi.branch@abc.ng"
+    },
+    {
+      "description": "Card payment Support Phone",
+      "type": "Phone",
+      "value": "+234814000000"
+    }
+  ],
+  "socialMediaInfo": [
+    {
+      "description": "Instagram ",
+      "type": "IG",
+      "value": "@abc.ng"
+    }
+  ],
+  "expansionFields": [
+    {
+      "id": "Field1",
+      "description": "What is the intention of this ",
+      "value": "1001920190290"
+    }
+  ]
+}]

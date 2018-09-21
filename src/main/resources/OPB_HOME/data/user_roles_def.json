@@ -1,0 +1,29 @@
+[
+	{
+		"name": "ROLE_USER",
+		"privileges": [
+		
+		]
+	},
+	{
+		"name": "ROLE_MEMBER",
+		"privileges": [
+		    "personal.update",
+			"loan.apply"
+		]
+	},
+	{
+		"name": "ROLE_ADMIN",
+		"privileges": [
+			"contribution.approve",
+			"employee.contact.update",
+			"employee.employement.update",
+		    "employee.finace.update",
+			"employee.contact.approve",
+			"employee.employement.approve",
+		    "employee.finace.approve",		    
+			"loan.approve",
+			"personal.update"
+		]
+	}
+]

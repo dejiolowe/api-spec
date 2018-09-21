@@ -1,0 +1,53 @@
+[{
+	"accountTypeId": "SBA123",
+	"accountTypeName": "SANEF Savings Accounts",
+	"minBalance": 100000,
+	"maxBalance": 100000000,
+	"maxOutflowTxnLimit": 10000000,
+	"maxInflowTxnLimit": 25000000,
+	"currency": "NGN",
+	"kycLevel": 2,
+	"documentations": [
+		{
+			"type": "BVN",
+			"description": "Biometric Verification Number"
+		},
+		{
+			"type": "NID",
+			"description": "National Id card"
+		},
+		{
+			"type": "ADD",
+			"description": "Adress"
+		}
+	],
+	"cardProducts": [
+		{
+			"type": "Mastercard",
+			"description": "Mastercard",
+			"maxTransactionLimit": "50000"
+		},
+		{
+			"type": "Visa",
+			"description": "Visa",
+			"maxTransactionLimit": "50000"
+		},
+		{
+			"type": "Verve",
+			"description": "Verve",
+			"maxTransactionLimit": "50000"
+		}
+	],
+	"ussd": "true",
+	"mobileApp": "true",
+	"atm": "true",
+	"localWeb": "true",
+	"internationalWeb": "false",
+	"expansionFields": [
+		{
+			"id": "Field1",
+			"description": "What is the intention of this ",
+			"value": "1001920190290"
+		}
+	]
+}]
