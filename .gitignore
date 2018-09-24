@@ -3,4 +3,6 @@
 /target/
 /workspace/
 api-ng.iml
-/.settings/*
+/.settings/
+/.project
+/.classpath
