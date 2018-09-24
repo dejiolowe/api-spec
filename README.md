@@ -33,5 +33,4 @@
 
 ### Who do I talk to? ###
 
-* The Open Banking Nigeria team
-	send a mail to ??? and we will contact you.
+* Send a mail to ??? and we will contact you.
