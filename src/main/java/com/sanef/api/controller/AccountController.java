@@ -44,7 +44,7 @@ public class AccountController extends BaseApiController {
             @ApiResponse(code = 404, message = "Account Not Found"),
             @ApiResponse(code = 200, response = BankAccountOpeningResponse.class, message = "Account Information")
     })
-    @GetMapping(path = "/requestId/{request-id}")
+    @GetMapping(path = "/requestId/{request-id}/status")
     public GenericResponse<BankAccountOpeningResponse> findAccountByRequestId(@PathVariable("request-id") @ApiParam(value = "Account opening requestId", required = true) String requestId) {
         BankAccountOpeningResponse bankInfo = bankService.getAccountByRequestId(requestId);
         return new GenericSuccessResponse<>("Account found", bankInfo);
@@ -57,7 +57,7 @@ public class AccountController extends BaseApiController {
             @ApiResponse(code = 404, message = "Account Not Found"),
             @ApiResponse(code = 200, response = BankAccountOpeningResponse.class, message = "Account Status Information")
     })
-    @GetMapping(path = "/nuban/{account-number}")
+    @GetMapping(path = "/nuban/{account-number}/status")
     public GenericResponse<BankAccountOpeningResponse> findAccountByAccountNumber(@PathVariable("account-number") @ApiParam(value = "The Account Number", required = true) String accountNumber) {
         BankAccountOpeningResponse bankInfo = bankService.getAccountByRequestId(accountNumber);
         return new GenericSuccessResponse<>("Account found", bankInfo);
