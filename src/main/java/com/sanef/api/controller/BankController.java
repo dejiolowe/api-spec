@@ -1,4 +1,4 @@
-package com.sanef.api.controller.bank;
+package com.sanef.api.controller;
 
 import com.sanef.api.controller.BaseApiController;
 import com.sanef.api.dto.BankBranchInfoDto;
@@ -17,11 +17,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Api(value = "bank", description = "Bank/Branch related operations", consumes = "application/json", tags = {"Branch"})
+@Api(value = "bank", description = "Bank/Branch related operations", consumes = "application/json", tags = {"Bank"})
 @RestController
 @Slf4j
 @RequestMapping(path = "/bank")
-public class BankInfoController extends BaseApiController {
+public class BankController extends BaseApiController {
 
     @Autowired
     private BankService bankService;

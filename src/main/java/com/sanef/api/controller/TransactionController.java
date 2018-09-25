@@ -1,9 +1,6 @@
-package com.sanef.api.controller.transactions;
+package com.sanef.api.controller;
 
-import com.sanef.api.dto.CashTransactionAuthRequest;
-import com.sanef.api.dto.CashTransactionRequest;
-import com.sanef.api.dto.CashTransactionResponse;
-import com.sanef.api.dto.CashTransactionValidationResponse;
+import com.sanef.api.dto.*;
 import com.sanef.api.service.TransactionService;
 import com.sanef.api.vo.GenericResponse;
 import com.sanef.api.vo.GenericSuccessResponse;
@@ -43,7 +40,7 @@ public class TransactionController {
             @ApiResponse(code = 404, message = "Account Not Found"),
             @ApiResponse(code = 200, response = CashTransactionValidationResponse.class, message = "Request processed successfully")
     })
-    @RequestMapping(value = "/cash-out/{transaction-id}/authorize", method = RequestMethod.POST)
+    @PostMapping(value = "/cash-out/{transaction-id}/authorize")
     public GenericResponse<CashTransactionValidationResponse> cashOutRequestAuthValidation(@RequestBody CashTransactionAuthRequest cashTransactionRequest, @PathVariable("transaction-id") String transactionId) throws Exception {
         cashTransactionRequest.setTransactionId(transactionId);
         CashTransactionValidationResponse cResponse = transactionService.cashOutAuth(cashTransactionRequest);
@@ -57,11 +54,22 @@ public class TransactionController {
             @ApiResponse(code = 404, message = "Account Not Found"),
             @ApiResponse(code = 200, response = CashTransactionResponse.class, message = "Request processed successfully")
     })
-    @RequestMapping(value = "/cash-in", method = RequestMethod.POST)
+    @PostMapping(value = "/cash-in")
     public GenericResponse<CashTransactionResponse> cashInAuthRequest(@RequestBody CashTransactionRequest cashTransactionRequest) throws Exception {
         CashTransactionResponse cResponse = transactionService.cashInAuthRequest(cashTransactionRequest);
         return new GenericSuccessResponse<>("Request Processed Successfully", cResponse);
     }
 
+    @ApiOperation(value = "Get Transaction", response = CashTransactionResponse.class, nickname = "Get Transaction")
+    @ApiResponses(value = {
+            @ApiResponse(code = 400, message = "Invalid Transaction Id"),
+            @ApiResponse(code = 404, message = "Transaction Not Found"),
+            @ApiResponse(code = 200, response = CashTransactionResponse.class, message = "Request processed successfully")
+    })
+    @GetMapping(value = "/{transaction-id}")
+    public GenericResponse<TransactionStatus> getTransaction(@PathVariable("transaction-id") String transactionId) throws Exception {
+        TransactionStatus transaction = transactionService.getTransaction(transactionId);
+        return new GenericSuccessResponse<>("Request Processed Successfully", transaction);
+    }
 
 }

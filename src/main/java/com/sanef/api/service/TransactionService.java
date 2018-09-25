@@ -1,10 +1,7 @@
 package com.sanef.api.service;
 
 
-import com.sanef.api.dto.CashTransactionAuthRequest;
-import com.sanef.api.dto.CashTransactionRequest;
-import com.sanef.api.dto.CashTransactionResponse;
-import com.sanef.api.dto.CashTransactionValidationResponse;
+import com.sanef.api.dto.*;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -26,6 +23,10 @@ public class TransactionService {
 
     public CashTransactionResponse cashInAuthRequest(CashTransactionRequest cashTransactionRequest) throws Exception {
         return this.dataService.getData("txnAuthRes.json", CashTransactionResponse.class);
+    }
+
+    public TransactionStatus getTransaction(String transactionId) throws Exception {
+        return this.dataService.getData("txnAuthRes.json", TransactionStatus.class);
     }
 
 }

@@ -1,4 +1,4 @@
-package com.sanef.api.controller.account;
+package com.sanef.api.controller;
 
 import com.sanef.api.controller.BaseApiController;
 import com.sanef.api.dto.BankAccountOpeningRequest;
@@ -20,7 +20,7 @@ import java.util.List;
 @Slf4j
 @RequestMapping(path = "/account")
 @Api(value = "Account", description = "Account related operations", consumes = "application/json", produces = "application/json", tags = {"Account"})
-public class BankAccountOpeningController extends BaseApiController {
+public class AccountController extends BaseApiController {
 
     @Autowired
     private BankService bankService;
