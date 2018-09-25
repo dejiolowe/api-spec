@@ -3,6 +3,7 @@ package com.sanef.api.service;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,10 +15,11 @@ import javax.annotation.PostConstruct;
 import java.io.File;
 
 @Service
+@Slf4j
 public class DataService {
 
-    @Value("${OPB_HOME:}")
-    private String OPB_HOME;
+    @Value("${SANEF_HOME:}")
+    private String SANEF_HOME;
 
     @Autowired
     protected ApplicationEventPublisher eventPublisher;
@@ -26,11 +28,11 @@ public class DataService {
 
 
     private File getOBNDataFile(String dataFile) throws Exception {
-        if (StringUtils.isEmpty(OPB_HOME)) {
-            ClassPathResource classPathResource = new ClassPathResource(String.format("OPB_HOME/data/%s", dataFile));
+        if (StringUtils.isEmpty(SANEF_HOME)) {
+            ClassPathResource classPathResource = new ClassPathResource(String.format("SANEF_HOME/data/%s", dataFile));
             return classPathResource.getFile();
         } else {
-            return new File(OPB_HOME);
+            return new File(SANEF_HOME);
         }
     }
 
@@ -38,7 +40,8 @@ public class DataService {
         try {
             return this.objectMapper.readValue(getOBNDataFile(fileName), type);
         } catch (Exception e) {
-            e.printStackTrace();
+            log.warn("Cannot convert json data for {} using file {}", type, fileName);
+            log.error(null, e);
         }
         return null;
     }
