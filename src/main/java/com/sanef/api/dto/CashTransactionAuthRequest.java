@@ -1,18 +1,20 @@
 package com.sanef.api.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.List;
 
-import lombok.Data;
-
 @Data
-public class CashTransactionAuthRequest implements Serializable{
+public class CashTransactionAuthRequest implements Serializable {
 
-private String transactionId;
+    @JsonIgnore
+    private String transactionId;
 
-	private String accountNumber;
-	
-	private List<CashTransactionAuth> authorization;
-	
-	
+    private String accountNumber;
+
+    private List<CashTransactionAuth> authorization;
+
+
 }
