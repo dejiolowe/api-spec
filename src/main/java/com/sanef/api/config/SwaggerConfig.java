@@ -43,18 +43,18 @@ public class SwaggerConfig {
     @Bean
     public ApiInfo apiInfo(Contact contact) {
         return new ApiInfoBuilder()
-                .title(environment.getProperty("ob.api.name"))
-                .description(environment.getProperty("ob.api.description"))
-                .version(environment.getProperty("ob.version"))
-                .termsOfServiceUrl(environment.getProperty("ob.url"))
-                .license(environment.getProperty("ob.licence"))
-                .licenseUrl(environment.getProperty("ob.licence.url"))
+                .title(environment.getProperty("project.api.name"))
+                .description(environment.getProperty("project.api.description"))
+                .version(environment.getProperty("project.version"))
+                .termsOfServiceUrl(environment.getProperty("project.url"))
+                .license(environment.getProperty("project.licence"))
+                .licenseUrl(environment.getProperty("project.licence.url"))
                 .contact(contact).build();
     }
 
     @Bean
     public Contact contact() {
-        return new Contact(environment.getProperty("ob.name"), environment.getProperty("ob.url"), environment.getProperty("ob.email"));
+        return new Contact(environment.getProperty("project.name"), environment.getProperty("project.url"), environment.getProperty("project.email"));
     }
 
     private List<SecurityScheme> securitySchema() {
