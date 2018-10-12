@@ -6,7 +6,7 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 @Data
-public class NextOfKin implements Serializable {
+public class LinkedCard implements Serializable {
 
 	public String type;
 
