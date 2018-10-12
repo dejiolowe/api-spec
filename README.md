@@ -33,4 +33,4 @@
 
 ### Who do I talk to? ###
 
-* Send a mail to ??? and we will contact you.
+* Send a mail to tech@openbanking.ng and we will contact you as soon as we can.
