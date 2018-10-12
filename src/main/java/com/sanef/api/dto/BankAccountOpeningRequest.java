@@ -4,6 +4,11 @@ import lombok.Data;
 
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import com.sanef.api.dto.BankAgency;
+import com.sanef.api.dto.NextOfKin;
+import com.sanef.api.dto.LinkedCard;
+
+
 
 @Data
 public class BankAccountOpeningRequest implements Serializable {
@@ -41,20 +46,13 @@ public class BankAccountOpeningRequest implements Serializable {
 
 	public String email;
 
-	public String nextOfKinName;
-
-	public String nextOfKinGender;
-
-	public String nextOfKinAddress;
-
-	public String nextOfKinEmail;
-
-	public String nextOfKinPhone;
-
-	public String nextOfKinRelationship;
+	public NextOfKin nextOfKin;
 
 	public String cardSerialNumber;
 	
 	private final static long serialVersionUID = 8802982190366919463L;
 
+	public BankAgency agency;
+	
+	private LinkedCard linkedCard;
 }
